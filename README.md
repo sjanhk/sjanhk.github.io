@@ -32,5 +32,5 @@ stage 人物出现在三体小说的哪个阶段
 三体_nodes.csv
 三体_edges.csv  
 最后使用pyechart库实现不错的可视化效果。  
-[课后习题链接]([https://sjanhk.github.io/santi.html)
+[课后习题链接](https://sjanhk.github.io/santi.html)
 
