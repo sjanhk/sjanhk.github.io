@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>三体人物关系图</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <iframe src="三体_graph.html" id="graphFrame"></iframe>
+        <div class="controls">
+            <button onclick="zoomIn()">放大</button>
+            <button onclick="zoomOut()">缩小</button>
+        </div>
+    </div>
+    <script>
+        function zoomIn() {
+            document.getElementById('graphFrame').style.transform = "scale(1.2)";
+        }
+        function zoomOut() {
+            document.getElementById('graphFrame').style.transform = "scale(0.8)";
+        }
+    </script>
+</body>
+</html>
+
+</head>
+<body>
+    <div class="container">
+        <div class="description">
+            <p>此关系图展示了小说《三体》中各个人物之间的相互关系。通过人物共现数据，我们可以观察到不同人物在故事发展中的重要性和相互影响。</p>
+            <p>人物的大小代表了其在文本中出现的频率,不同颜色代表出现在不同的版本。</p>
+            <p>通过这种图表，读者可以更直观地了解复杂的人物关系网络，从而对整个故事有更深的理解。</p>
+        </div>
+    </div>
+</body>
+</html>
