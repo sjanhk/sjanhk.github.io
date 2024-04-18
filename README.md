@@ -33,5 +33,6 @@ stage 人物出现在三体小说的哪个阶段
 三体_edges.csv  
 最后使用pyechart库实现不错的可视化效果。  
 [课后习题链接](https://sjanhk.github.io/santi.html)  
-备注：我在本地查看santi.html文件时并没有问题，但上传到github后出现404报错，查询github page规则并没有能够debug，麻烦老师能将文件下载到本地查看我的作业
+备注：我在本地查看santi.html文件时并没有问题，但上传到github后出现404报错，查询github page规则并没有能够debug，麻烦老师能将文件下载到本地查看我的作业  
+若无法下载到本地查看，此处是未经过网页设计的初版作业[课后习题初版](https://sjanhk.github.io/三体_graph.html)
 
