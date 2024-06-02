@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租房数据分析</title>
+    <style>
+        #iframe-container {
+            width: 100%;
+            height: 800px; /* 根据需要调整高度 */
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <style>
+    body {
+    /* 背景图像 */
+    background-image: url('background.jpg');
+    /* 确保背景图像覆盖整个页面 */
+    background-size: cover;
+    background-attachment: fixed;
+    }
+</style>
+</head>
+<body>
+    <div id="iframe-container">
+        <!-- 初始时只显示第一个iframe -->
+        <iframe src="dynamic_chart.html" id="w" class="active-iframe"></iframe>
+        <iframe src="apartment_prices_comparison.html" id="a" class="hidden"></iframe>
+        <iframe src="housing_comparison.html" id="s" class="hidden"></iframe>
+        <iframe src="housing_prices_comparison.html" id="d" class="hidden"></iframe>
+        <iframe src="unit_price_to_income_ratio.html" id="f" class="hidden"></iframe>
+    </div>
+
+    <!-- 上一张按钮 -->
+    <button id="prevButton">上一张</button>
+    <!-- 下一张按钮 -->
+    <button id="nextButton">下一张</button>
+
+    <script>
+        // 获取所有的iframe和按钮
+        var iframes = document.querySelectorAll('#iframe-container iframe');
+        var prevButton = document.getElementById('prevButton');
+        var nextButton = document.getElementById('nextButton');
+        var currentIframe = 0; // 当前显示的iframe索引
+
+        // 显示指定索引的iframe
+        function showIframe(index) {
+            // 隐藏当前iframe
+            iframes[currentIframe].classList.add('hidden');
+            iframes[currentIframe].classList.remove('active-iframe');
+            // 显示新iframe
+            iframes[index].classList.remove('hidden');
+            iframes[index].classList.add('active-iframe');
+            currentIframe = index;
+        }
+
+        // 上一张按钮事件
+        prevButton.addEventListener('click', function() {
+            if (currentIframe > 0) {
+                showIframe(currentIframe - 1);
+            }
+        });
+
+        // 下一张按钮事件
+        nextButton.addEventListener('click', function() {
+            if (currentIframe < iframes.length - 1) {
+                showIframe(currentIframe + 1);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
